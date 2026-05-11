@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aurelia Books | Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#281800",
+                    "on-primary-fixed-variant": "#6e3900",
+                    "primary-fixed": "#ffdcc3",
+                    "tertiary-fixed": "#c7e7ff",
+                    "on-tertiary-fixed-variant": "#004c6c",
+                    "on-tertiary-fixed": "#001e2e",
+                    "surface-container-low": "#fff1e3",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#211b12",
+                    "tertiary-container": "#00b5fc",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#eee0d2",
+                    "inverse-surface": "#362f26",
+                    "surface-tint": "#904d00",
+                    "on-primary-container": "#623200",
+                    "inverse-on-surface": "#fcefe0",
+                    "surface-dim": "#e5d8ca",
+                    "error": "#ba1a1a",
+                    "background": "#fff8f3",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#2f1500",
+                    "surface": "#fff8f3",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#ff8c00",
+                    "surface-bright": "#fff8f3",
+                    "primary-fixed-dim": "#ffb77d",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#ffb77d",
+                    "surface-container-highest": "#eee0d2",
+                    "surface-container": "#f9ecde",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#ddc1ae",
+                    "surface-container-high": "#f3e6d8",
+                    "tertiary": "#00658f",
+                    "on-secondary-container": "#795513",
+                    "secondary-fixed-dim": "#f0be74",
+                    "outline": "#897362",
+                    "secondary-fixed": "#ffddb0",
+                    "tertiary-fixed-dim": "#85cfff",
+                    "secondary": "#7c5716",
+                    "on-secondary-fixed-variant": "#614000",
+                    "secondary-container": "#ffcc80",
+                    "on-surface": "#211b12",
+                    "on-surface-variant": "#564334",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#004360",
+                    "primary": "#904d00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px",
+                    "stack-sm": "12px",
+                    "stack-lg": "48px",
+                    "container-max": "1200px",
+                    "base": "8px",
+                    "stack-md": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Libre Caslon Text"],
+                    "label-sm": ["DM Sans"],
+                    "label-md": ["DM Sans"],
+                    "body-lg": ["DM Sans"],
+                    "body-md": ["DM Sans"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "headline-md": ["Libre Caslon Text"],
+                    "headline-xl": ["Libre Caslon Text"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f3;
+            color: #211b12;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface/80 backdrop-blur-md sticky top-0 z-50 shadow-[0_15px_15px_-3px_rgba(74,66,56,0.04)]">
+<div class="flex justify-between items-center w-full px-margin-mobile py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button aria-label="Menu" class="p-2 -ml-2 text-primary active:scale-95 transition-transform">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="text-headline-md font-headline-md font-semibold text-primary">Aurelia Books</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Mobile Hero Section -->
+<section class="px-margin-mobile pt-stack-md pb-stack-lg">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high h-[420px] flex flex-col justify-end p-6">
+<div class="absolute inset-0 z-0">
+<img alt="Atmospheric bookstore interior" class="w-full h-full object-cover" data-alt="An atmospheric, sun-drenched interior of a high-end boutique bookstore with rows of mahogany shelves reaching toward the ceiling. Warm golden light spills through large windows, illuminating dust motes dancing in the air. The aesthetic is tactile and intellectual, featuring a cream and warm wood palette. The mood is serene and inviting, evoking the quiet comfort of a late afternoon spent reading in a secluded library." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDs4KXPXclJNzMMiF8_cCLMJXqgbktjTD1al8ZSIWLMK07aMbBurW6MxJYkhU7bcKEmuKnx1-GVdCoqdS_PoLUEc3XsLpVC-gkj15ZvBKtwiJsZT4Gwc3_p1ZXaSn7NK2A_udknS6SV04HQC_MyAUm57VQgImgeSNyXIZj0ewqs9fa1L-qN86ic7LEg-1p46XpPf9QorLdfuaEEsWWFHrX6-npIwJ3OAZv26vdKiBzOxyXzAK9kjTTx_dZLVDb-TYkQxJPGMfxh9DD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-4">
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile text-white">Curating the intellectual soul.</h1>
+<p class="text-body-md font-body-md text-white/90">Discover our meticulously selected collection of rare finds and modern classics.</p>
+<button class="w-full bg-primary-container text-on-primary py-4 rounded-lg font-label-md text-label-md uppercase tracking-wider shadow-lg active:scale-[0.98] transition-transform">
+                    Explore Catalog
+                </button>
+</div>
+</div>
+</section>
+<!-- Categories / Chips (Horizontal Scroll) -->
+<section class="mb-stack-lg">
+<div class="flex overflow-x-auto gap-3 px-margin-mobile no-scrollbar pb-2">
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-secondary-container/50 text-on-secondary-container border border-primary/10 font-label-md text-label-md">Fiction</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/30 font-label-md text-label-md">Philosophy</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/30 font-label-md text-label-md">Art &amp; Design</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/30 font-label-md text-label-md">History</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/30 font-label-md text-label-md">Poetry</button>
+</div>
+</section>
+<!-- Featured Arrivals (Bento-like Stacked Layout) -->
+<section class="px-margin-mobile mb-stack-lg">
+<div class="flex justify-between items-baseline mb-stack-md">
+<h2 class="text-headline-md font-headline-md text-on-surface">New Arrivals</h2>
+<a class="text-label-md font-label-md text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 gap-stack-md">
+<!-- Main Featured Book Card -->
+<div class="bg-surface rounded-xl overflow-hidden group">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg shadow-[0_15px_15px_-3px_rgba(74,66,56,0.04)]">
+<img alt="Book Cover: The Minimalist Home" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A minimalist book cover with a clean white design and elegant serif typography, resting on a warm cream surface. The setting is bright and airy with soft, ambient shadows that feel natural and tactile. High-quality paper texture is visible on the book spine. The image captures a late-afternoon sun-drenched aesthetic with a palette of warm oranges and earthy charcoals, emphasizing intellectual serenity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC706WWPXCMcJNrbyeA8QQH3YkRJThLUCrvDB-PC4yEFs4PzQTo5-WDlYuP6X3WiE1dPAkzV8OZUg4ohk3M_-8VVcRAXh84c9CSL-1rO1U16FrlbQMGZkvQcFvuTrkw9vCtVr6VtuNza5JNGPTEl-J_Nxz-0pjkwKPrzpSTpuJtFTnV5VqoLUGQ_NeGp7u26JvbIhcSAVuSNGpY0a3WHctqJ6qy4DGfOQZflqAI2JDXDMaPzAIZcfNCV8E86cADUkqoGKfihFlXMqXg"/>
+<div class="absolute top-3 right-3">
+<button class="w-10 h-10 bg-surface/90 backdrop-blur rounded-full flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+</div>
+<div class="pt-4 px-1">
+<h3 class="text-headline-md font-headline-md text-on-surface leading-tight">The Modern Aesthetics</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Elena Vance</p>
+<div class="flex justify-between items-center mt-2">
+<span class="text-label-md font-label-md font-bold text-on-surface">$34.00</span>
+<button class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded font-label-sm text-label-sm">Add to Bag</button>
+</div>
+</div>
+</div>
+<!-- Two-Column Grid for Smaller items -->
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Book Card 2 -->
+<div class="group">
+<div class="aspect-[2/3] relative rounded-lg shadow-[0_10px_10px_-3px_rgba(74,66,56,0.04)] overflow-hidden mb-3">
+<img alt="Book Cover: Architecture" class="w-full h-full object-cover" data-alt="A macro shot of a book spine and cover featuring minimalist architectural photography in sepia tones. The book is presented on a textured cream linen surface, lit by soft, directional window light that creates long, gentle shadows. The palette is a sophisticated mix of warm beige, light orange, and deep charcoal. The mood is contemplative and scholarly, reflecting a high-end boutique bookstore aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxAzwScVU4OP15fj1jIkqxKad6yBn5U7HU7sZAOw6B9GgPDxI9Fv2bl9gjl3yUvCRu2Q00Wmy2EEiDhV6Dj4_WNdCggHUFQHxFmU5k7kkJzYOXJbnj49TYr0Qi8oYuohmKRiCAkMJcm7EgpBlnmIVkEkTE5HQ6fckd1uSZp30QNtswM2_e-e2SKZ9cizsh-8VkH0vBxDnGQ002I10yHOvtwDWJG5NNG4ICX0kUfHCMqPbH7QrZqrutILd1bQN-5NIEEjAvMp6XgWj0"/>
+</div>
+<h4 class="text-label-md font-label-md text-on-surface line-clamp-1">Structures of Silence</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant">David Chipper</p>
+</div>
+<!-- Book Card 3 -->
+<div class="group">
+<div class="aspect-[2/3] relative rounded-lg shadow-[0_10px_10px_-3px_rgba(74,66,56,0.04)] overflow-hidden mb-3">
+<img alt="Book Cover: Nature" class="w-full h-full object-cover" data-alt="A beautifully bound book with a forest green and gold embossed cover, capturing a botanical illustration style. It is positioned diagonally across a sunlit oak table with a few scattered dried flower petals nearby. The lighting is warm and high-key, creating a relaxing and inviting reading atmosphere. The visual style is tactile, minimalist, and deeply focused on the physical quality of the book." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9UZ8NNYkyG8eP70mJhhTNz2HZ1y2OH5GUtptOsYP-LzS4UFOv6mjdqiInGOepsqvi6y_DyvV5jyMO0tsjd9juP5odw4gQt7Fq0gZntUfGaG8xFQ9hNuLVsohQrruJ1icR_Gd7X9YoyX-h5PPyBmHUWnuGrtCKCYGyjscusYOsoJnZbMXfPmw_Dhk5BemflrfGhybC3zuFl3ZOaRNmy4G4CqN4TuPxYISQkrxQQffB3TGSkJKa_Xz--GwyKOn_R8ck8jsLTQDL_Tc5"/>
+</div>
+<h4 class="text-label-md font-label-md text-on-surface line-clamp-1">The Floral Archive</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Sarah Linden</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Staff Picks (Asymmetric Horizontal Layout) -->
+<section class="bg-surface-container-low py-stack-lg mb-stack-lg">
+<div class="px-margin-mobile mb-stack-md">
+<h2 class="text-headline-md font-headline-md text-on-surface">Staff Picks</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">Recommended by our resident curators.</p>
+</div>
+<div class="flex overflow-x-auto gap-stack-md px-margin-mobile no-scrollbar">
+<!-- Recommendation Item 1 -->
+<div class="min-w-[280px] bg-surface rounded-xl p-5 shadow-sm border border-outline-variant/20">
+<div class="flex gap-4">
+<div class="w-20 h-28 flex-shrink-0 bg-surface-dim rounded shadow-sm overflow-hidden">
+<img alt="Book cover" class="w-full h-full object-cover" data-alt="A vintage-style book cover with textured cream paper and navy blue typography, depicting a minimal compass icon. The image is a close-up that highlights the tactile quality of the paper and the subtle indentations of the letterpress printing. Set against a warm, sun-lit wooden background, the composition is clean and intellectual, using a palette of off-white, deep blue, and golden orange." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuPGsRdrsZByyj4Y-h1E1iZiT0Eyk6lZEQwaaYdG7VSerV6g5S5cspOAO3JZPWuMierEzhv9CuUsZ_KvFrpGL_pOU1BRtzFTcuPesOQ4bCGFOMX8j_qB4buZCOaSeN7Z62FTJnjUtzY5j4918DhgPhK-42WFKnrpDyz1YqR-dc48HygZIwb_VJ9WrljJs-zBUfCO8Z-aD7Po1486EQhdukQyQvZuo5r8V6Qqb5MKpmWmU--9C5NWxBbcniqZfWKDqG8tD1-ibIscn1"/>
+</div>
+<div class="flex flex-col justify-center">
+<h5 class="text-label-md font-label-md text-on-surface">Lost in Translation</h5>
+<p class="text-label-sm font-label-sm text-primary mt-1">Curated by Julian</p>
+</div>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-4 italic">"A profound exploration of linguistics that changed how I see the world. Absolutely essential."</p>
+</div>
+<!-- Recommendation Item 2 -->
+<div class="min-w-[280px] bg-surface rounded-xl p-5 shadow-sm border border-outline-variant/20">
+<div class="flex gap-4">
+<div class="w-20 h-28 flex-shrink-0 bg-surface-dim rounded shadow-sm overflow-hidden">
+<img alt="Book cover" class="w-full h-full object-cover" data-alt="A modern book cover with a striking abstract geometric pattern in shades of terracotta, ochre, and charcoal. The cover is slightly matte, reflecting a soft diffuse light from a nearby window. It lies flat on a light cream surface with a few sprigs of dried eucalyptus next to it. The overall aesthetic is warm, minimalist, and boutique, focusing on high-quality design and intellectual curiosity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEoKrvHkZG7-3Xz1egvmM9oesmURrT_fL0cP5p7LjIZX-qiXog4oz3I_bMTHYzQyO-w8_WtZ0MSGwSSuby7IbMI8_rPnAwB7vs_OQx-oEFcQ1TLLgFUl1CJqnJ6jAmO4Qm5Sd5rKqt_b-9loFl1hOVbLN1_mJ6fmpJ-Bz9B7OqYnHlpyz76RHcSpZaHdXdjFXqg3W9gU4fay9EcjikfWL1y9DylyCP9KJ7P_SbXicdo8IlR05vDqOwJHuEivbf3yH491MVDN1jEsi2"/>
+</div>
+<div class="flex flex-col justify-center">
+<h5 class="text-label-md font-label-md text-on-surface">Geometric Realism</h5>
+<p class="text-label-sm font-label-sm text-primary mt-1">Curated by Sarah</p>
+</div>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-4 italic">"The intersection of art and math has never felt this accessible or beautiful. A visual treat."</p>
+</div>
+</div>
+</section>
+<!-- Library View / Spines (Special Component) -->
+<section class="px-margin-mobile mb-stack-lg">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-stack-md">The Library Shelf</h2>
+<div class="flex items-end h-64 gap-1 p-4 bg-surface-container rounded-xl overflow-hidden shadow-inner">
+<div class="h-[90%] w-8 bg-[#904d00] rounded-t-sm flex flex-col items-center justify-center p-1 border-r border-black/10">
+<span class="[writing-mode:vertical-rl] text-[10px] text-white font-bold tracking-tighter opacity-80 uppercase">Hegel's Dialectics</span>
+</div>
+<div class="h-[85%] w-10 bg-[#7c5716] rounded-t-sm flex flex-col items-center justify-center p-1 border-r border-black/10">
+<span class="[writing-mode:vertical-rl] text-[10px] text-white font-bold tracking-tighter opacity-80 uppercase">The Republic</span>
+</div>
+<div class="h-[95%] w-9 bg-[#362f26] rounded-t-sm flex flex-col items-center justify-center p-1 border-r border-black/10">
+<span class="[writing-mode:vertical-rl] text-[10px] text-white font-bold tracking-tighter opacity-80 uppercase">Meditations</span>
+</div>
+<div class="h-[80%] w-7 bg-[#ff8c00] rounded-t-sm flex flex-col items-center justify-center p-1 border-r border-black/10">
+<span class="[writing-mode:vertical-rl] text-[10px] text-on-primary-fixed font-bold tracking-tighter opacity-80 uppercase">Design</span>
+</div>
+<div class="h-[88%] w-8 bg-[#f0be74] rounded-t-sm flex flex-col items-center justify-center p-1 border-r border-black/10">
+<span class="[writing-mode:vertical-rl] text-[10px] text-on-secondary-fixed font-bold tracking-tighter opacity-80 uppercase">Art History</span>
+</div>
+<div class="h-[92%] w-11 bg-[#904d00] rounded-t-sm flex flex-col items-center justify-center p-1 border-r border-black/10">
+<span class="[writing-mode:vertical-rl] text-[10px] text-white font-bold tracking-tighter opacity-80 uppercase">The Stranger</span>
+</div>
+<div class="h-[84%] w-6 bg-[#211b12] rounded-t-sm flex flex-col items-center justify-center p-1">
+<span class="[writing-mode:vertical-rl] text-[10px] text-white font-bold tracking-tighter opacity-80 uppercase">Kafka</span>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant/30 px-margin-mobile py-stack-lg">
+<div class="space-y-stack-md">
+<div>
+<span class="text-headline-md font-headline-md font-semibold text-primary">Aurelia Books</span>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">© 2024 Aurelia Books. Crafted for the intellectual soul.</p>
+</div>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="space-y-2">
+<h6 class="text-label-sm font-label-sm text-on-surface uppercase tracking-widest">Shop</h6>
+<ul class="space-y-2">
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Catalog</a></li>
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Staff Picks</a></li>
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div class="space-y-2">
+<h6 class="text-label-sm font-label-sm text-on-surface uppercase tracking-widest">Support</h6>
+<ul class="space-y-2">
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping</a></li>
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a></li>
+<li><a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-stack-md">
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform">
+<span class="material-symbols-outlined">alternate_email</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform">
+<span class="material-symbols-outlined">public</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform">
+<span class="material-symbols-outlined">history_edu</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation Bar (Mobile Primary Nav) -->
+<div class="fixed bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-lg border-t border-outline-variant/10 md:hidden z-50 px-4 py-2">
+<div class="flex justify-around items-center max-w-lg mx-auto">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-label-sm font-label-sm">Search</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="text-label-sm font-label-sm">Library</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-label-sm font-label-sm">Wishlist</span>
+</a>
+</div>
+</div>
+<!-- Extra padding for bottom nav -->
+<div class="h-20 md:hidden"></div>
+</body></html>

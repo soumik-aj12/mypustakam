@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+@import "@fontsource/dm-sans";
+@import "@fontsource/libre-caslon-text";

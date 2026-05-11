@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#281800",
+                    "on-primary-fixed-variant": "#6e3900",
+                    "primary-fixed": "#ffdcc3",
+                    "tertiary-fixed": "#c7e7ff",
+                    "on-tertiary-fixed-variant": "#004c6c",
+                    "on-tertiary-fixed": "#001e2e",
+                    "surface-container-low": "#fff1e3",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#211b12",
+                    "tertiary-container": "#00b5fc",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#eee0d2",
+                    "inverse-surface": "#362f26",
+                    "surface-tint": "#904d00",
+                    "on-primary-container": "#623200",
+                    "inverse-on-surface": "#fcefe0",
+                    "surface-dim": "#e5d8ca",
+                    "error": "#ba1a1a",
+                    "background": "#fff8f3",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#2f1500",
+                    "surface": "#fff8f3",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#ff8c00",
+                    "surface-bright": "#fff8f3",
+                    "primary-fixed-dim": "#ffb77d",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#ffb77d",
+                    "surface-container-highest": "#eee0d2",
+                    "surface-container": "#f9ecde",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#ddc1ae",
+                    "surface-container-high": "#f3e6d8",
+                    "tertiary": "#00658f",
+                    "on-secondary-container": "#795513",
+                    "secondary-fixed-dim": "#f0be74",
+                    "outline": "#897362",
+                    "secondary-fixed": "#ffddb0",
+                    "tertiary-fixed-dim": "#85cfff",
+                    "secondary": "#7c5716",
+                    "on-secondary-fixed-variant": "#614000",
+                    "secondary-container": "#ffcc80",
+                    "on-surface": "#211b12",
+                    "on-surface-variant": "#564334",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#004360",
+                    "primary": "#904d00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px",
+                    "stack-sm": "12px",
+                    "stack-lg": "48px",
+                    "container-max": "1200px",
+                    "base": "8px",
+                    "stack-md": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Libre Caslon Text"],
+                    "label-sm": ["DM Sans"],
+                    "label-md": ["DM Sans"],
+                    "body-lg": ["DM Sans"],
+                    "body-md": ["DM Sans"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "headline-md": ["Libre Caslon Text"],
+                    "headline-xl": ["Libre Caslon Text"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .book-shadow {
+            shadow: 0 15px 15px -3px rgba(74, 66, 56, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Shell -->
+<nav class="bg-surface/80 backdrop-blur-md sticky top-0 z-50 shadow-[0_15px_15px_-3px_rgba(74,66,56,0.04)]">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-semibold text-primary">Aurelia Books</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 text-label-md font-label-md" href="#">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-medium hover:text-primary transition-colors duration-200 text-label-md font-label-md" href="#">Catalog</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 text-label-md font-label-md" href="#">Staff Picks</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 text-label-md font-label-md" href="#">About</a>
+</div>
+<div class="flex items-center gap-gutter">
+<div class="hidden lg:block relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="bg-surface-container-low border border-outline-variant/30 rounded-full py-2 pl-10 pr-4 text-body-md focus:outline-none focus:ring-1 focus:ring-primary-container w-64 transition-all" placeholder="Search the archives..." type="text"/>
+</div>
+<div class="flex gap-stack-md">
+<button class="hover:scale-95 transition-transform duration-150 ease-in-out text-primary">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="hover:scale-95 transition-transform duration-150 ease-in-out text-primary">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<!-- Breadcrumbs -->
+<nav class="mb-stack-md flex gap-2 text-on-surface-variant text-label-md font-label-md">
+<a class="hover:text-primary transition-colors" href="#">Catalog</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">Fiction</a>
+<span>/</span>
+<span class="text-primary font-medium">The Alchemist's Garden</span>
+</nav>
+<!-- Product Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Left: Large Book Cover -->
+<div class="md:col-span-5 lg:col-span-6 flex justify-center md:justify-start">
+<div class="relative group">
+<img class="w-full max-w-[500px] aspect-[2/3] object-cover shadow-[0_15px_30px_rgba(74,66,56,0.12)] rounded-sm transition-transform duration-500 group-hover:scale-[1.02]" data-alt="A luxurious hardcover book titled The Alchemist's Garden resting on a weathered wooden table. The cover design features intricate gold foil botanical illustrations of mystical plants and celestial symbols against a deep forest green background. Soft, sun-drenched late afternoon light casts long, warm shadows, creating a tactile and intellectual atmosphere. The setting is a quiet, minimalist library with a warm cream wall in the soft-focus background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwnZgvVkp1P9iDdp6kIm99prjhGq__wqEsckOhYn6oaVIoGsjlfdUUQIF2aqxwToFN7QwEH0Cz2jzh_uq0mWcNIQD3VBKcuMC1hRAVc1_cME98q6hUXuFZOtemz8n6QsBqw8oosTzb764WkJ-DtEMc5Vpk1dqlTus9qycCtEtECjGFuW5qDZ1pQLs0AQKbRC4IyUj30rZ8i8_w5NrqLwHqSUo3d5bQAI1kRTpoBmU7emrzmS60OvPRYa1XlxucOYb_zQCil4TmBYWV"/>
+<div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-sm"></div>
+</div>
+</div>
+<!-- Right: Details -->
+<div class="md:col-span-7 lg:col-span-6 flex flex-col gap-stack-md">
+<div class="border-b border-outline-variant/30 pb-stack-md">
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-2 leading-tight">The Alchemist's Garden</h1>
+<p class="font-headline-md text-headline-md text-primary italic">by Elara Vance</p>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="flex text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant">4.8 (124 reviews)</span>
+</div>
+<div class="text-headline-md font-headline-md text-on-surface font-bold">
+                    $32.00
+                </div>
+<div class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-prose italic">
+                    "Between the petals of a forgotten rose and the silvered dew of a midnight moon, lies the garden where science meets soul. A poetic exploration of botanical magic, where every leaf whispers a secret of the ancient elements."
+                </div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                    In this mesmerizing blend of historical fiction and lyrical prose, Vance takes us into the heart of a 17th-century apothecary's secret sanctuary. Here, the boundary between the physical and the metaphysical thins, revealing a world where the cultivation of a single rare lily can alter the course of destiny.
+                </p>
+<div class="flex flex-wrap gap-stack-sm my-stack-sm">
+<span class="px-4 py-1.5 bg-secondary-container/50 text-on-secondary-container rounded-full text-label-md font-label-md border border-secondary-container">Hardcover</span>
+<span class="px-4 py-1.5 bg-secondary-container/50 text-on-secondary-container rounded-full text-label-md font-label-md border border-secondary-container">Fiction</span>
+<span class="px-4 py-1.5 bg-secondary-container/50 text-on-secondary-container rounded-full text-label-md font-label-md border border-secondary-container">Magical Realism</span>
+</div>
+<div class="flex flex-col sm:flex-row gap-gutter mt-stack-md">
+<button class="flex-1 bg-primary-container text-white font-label-md text-label-md py-4 px-8 rounded-lg hover:brightness-110 transition-all shadow-sm flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                        Add to Cart
+                    </button>
+<button class="flex-1 border border-secondary-container text-on-surface font-label-md text-label-md py-4 px-8 rounded-lg hover:bg-secondary-container/20 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+                        Save to Wishlist
+                    </button>
+</div>
+<!-- Product Meta -->
+<div class="mt-stack-lg grid grid-cols-2 gap-stack-md py-stack-md border-t border-outline-variant/30">
+<div>
+<span class="block text-label-sm font-label-sm text-on-surface-variant uppercase">ISBN-13</span>
+<span class="text-body-md font-body-md text-on-surface">978-3-16-148410-0</span>
+</div>
+<div>
+<span class="block text-label-sm font-label-sm text-on-surface-variant uppercase">Pages</span>
+<span class="text-body-md font-body-md text-on-surface">412 Pages</span>
+</div>
+<div>
+<span class="block text-label-sm font-label-sm text-on-surface-variant uppercase">Publisher</span>
+<span class="text-body-md font-body-md text-on-surface">Lumina Press</span>
+</div>
+<div>
+<span class="block text-label-sm font-label-sm text-on-surface-variant uppercase">Published</span>
+<span class="text-body-md font-body-md text-on-surface">Oct 2023</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Readers Also Enjoyed Section -->
+<section class="mt-32">
+<div class="flex items-end justify-between mb-stack-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Readers Also Enjoyed</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Curated stories for kindred spirits.</p>
+</div>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 hover:underline underline-offset-4" href="#">
+                    View Catalog
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Book Card 1 -->
+<div class="flex flex-col gap-4 group cursor-pointer">
+<div class="overflow-hidden rounded-sm aspect-[2/3] shadow-[0_15px_15px_-3px_rgba(74,66,56,0.04)] group-hover:shadow-[0_20px_25px_-5px_rgba(74,66,56,0.1)] transition-all duration-300">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A vintage book cover for a mystery novel titled The Whispering Woods. The design features a dark, misty forest landscape with a silhouette of a lonely traveler. Deep mahogany and charcoal tones dominate the palette, with a subtle tactile paper texture. The lighting is moody and atmospheric, evoking a sense of calm intrigue and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL1pjnhXTbbYPULFAaZU1qgnVxQtt_EEl29fUwgXHl4sikNiuK6B5KPtz9YagDxXc7_Us5UfE2L6W-bzVTSDVNmrnhXBKEPGChARPLyZSi5pOyTTIzXiEPBd_XVzV7ElJhMWIVNcRfv6kTRX_4_CP0mTG1qYJvY7v07YelhpD3y5rni77yQ0asDGVNoVjNQ4LPk0APgNmXxc8t0rrpqHkvPz_0J1CzvUFfhlf37bD2VV9hFOmFIFWrkz0BKPoQDbSmSSiEOc4edRMW"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors leading-tight">The Whispering Woods</h3>
+<p class="font-body-md text-body-md text-on-surface-variant italic">Julian Thorne</p>
+</div>
+</div>
+<!-- Book Card 2 -->
+<div class="flex flex-col gap-4 group cursor-pointer">
+<div class="overflow-hidden rounded-sm aspect-[2/3] shadow-[0_15px_15px_-3px_rgba(74,66,56,0.04)] group-hover:shadow-[0_20px_25px_-5px_rgba(74,66,56,0.1)] transition-all duration-300">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An elegant book cover for a historical memoir titled Silk and Shadow. The cover displays a close-up of aged parchment paper with delicate ink splashes and a faded stamp of a celestial map. The overall color scheme is ivory, sepia, and navy blue, conveying a refined and scholarly aesthetic. The light is soft and diffused, creating an intellectual and warm atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHqM1tg6UhDp8W6vmPU74hPJIIHg_LTUwjcvu_QG1CZt8uAGNkye-Ndlo8LkgUW72zoGcm5E8IGQnVU1dleCY2HCRyJUPrHqDCK0nMVtZVj-oa1NzntQQvPr8ZRaai69lsj261eqOCayOQZyl8Kd97OeiFIbFRVcURKVxVRst7lFElW6rCeibcvx8TPugWpxoD5hT8GwZoeqfrmWWPJSXytrK3CqbGVVlEFV_S7cNUOKyf4ihiOrX9N_tRji4C-qlhATw3gO9VUv1Q"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors leading-tight">Silk and Shadow</h3>
+<p class="font-body-md text-body-md text-on-surface-variant italic">M.L. Sterling</p>
+</div>
+</div>
+<!-- Book Card 3 -->
+<div class="flex flex-col gap-4 group cursor-pointer">
+<div class="overflow-hidden rounded-sm aspect-[2/3] shadow-[0_15px_15px_-3px_rgba(74,66,56,0.04)] group-hover:shadow-[0_20px_25px_-5px_rgba(74,66,56,0.1)] transition-all duration-300">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A minimalist book cover design for The Starlight Compass. It features a single, fine-line illustration of a vintage nautical compass pointing toward a bright, stylized North Star. The background is a calm, sun-drenched cream color with subtle paper grain texture. The design is modern, airy, and inviting, perfectly aligning with a minimalist boutique bookstore style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiiV3TWE92vRNf32BgJLLHpcJedU8j61mciK0TuenwabeGGkR8hYfXoEkMGX3Lkg04Tq09Fs3NFS9EQPdF73iIXiK4i4dFawXk6akaQtrjz6GNRCtLcCLxyCUkg8xYVlM2TJyLV-4zB4Tnfhs3uCEusHvqh097aIwitbT7GMZVCp7p0Jic6WsNYTglaySMHAOSDYYREgQXVdwm8xul7BsqFHBT-FRnMpLO1qn6RQzSoshPN8Q9UH7_BjTXAPpu3o9xrOEA4t3RSihW"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors leading-tight">Starlight Compass</h3>
+<p class="font-body-md text-body-md text-on-surface-variant italic">Aria Fawn</p>
+</div>
+</div>
+<!-- Book Card 4 -->
+<div class="flex flex-col gap-4 group cursor-pointer">
+<div class="overflow-hidden rounded-sm aspect-[2/3] shadow-[0_15px_15px_-3px_rgba(74,66,56,0.04)] group-hover:shadow-[0_20px_25px_-5px_rgba(74,66,56,0.1)] transition-all duration-300">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A contemporary book cover for Echoes of Ember. The design uses a bold, abstract color-blocking technique with deep burnt orange, earthy browns, and pale sand. A slight linen texture is visible on the surface. The mood is warm and grounded, evoking late-afternoon reading and artisanal craftsmanship. High-quality imagery focusing on texture and depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHs9pA5-lmQL8O2ww_IZhy1vZ7REVmNiVU9VLBqO1j_r6fbdfZldwqCatm04seWCX-g_bf0cYduMhTYu2Tf693cJ2Ceb2s9UkxH0SpQWJlcl-wUqNuP2jJOO43lGLAAWi9XTPlaQOsWdaMx0wzX6Ph9dGkTMKqaYKZnUh_7PHyuPd8wWobYwe1TO0a89NDmZe0inWaorBcOoFA5py-4tMuJaCXb2H-Km3icXS5qTQ5rmGate3o8-Ni6hI7n-fG1tXNQ3j2dvGhQjD6"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors leading-tight">Echoes of Ember</h3>
+<p class="font-body-md text-body-md text-on-surface-variant italic">Kaelen Moore</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-low border-t border-outline-variant/30 mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter w-full px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="flex flex-col gap-stack-sm">
+<div class="text-headline-md font-headline-md font-semibold text-primary">Aurelia Books</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2 max-w-xs">Dedicated to the quiet hours and the curious minds. Every book in our collection is hand-picked for its soul and substance.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-label-sm font-label-sm uppercase text-on-surface tracking-widest">Navigation</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 transition-all text-body-md font-body-md" href="#">Our Story</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 transition-all text-body-md font-body-md" href="#">Catalog</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 transition-all text-body-md font-body-md" href="#">Staff Picks</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 transition-all text-body-md font-body-md" href="#">The Journal</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-label-sm font-label-sm uppercase text-on-surface tracking-widest">Support</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 transition-all text-body-md font-body-md" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 transition-all text-body-md font-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 transition-all text-body-md font-body-md" href="#">Contact Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary underline decoration-primary/30 transition-all text-body-md font-body-md" href="#">FAQ</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-label-sm font-label-sm uppercase text-on-surface tracking-widest">Join the Newsletter</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Receive monthly curators' notes and early access to rare finds.</p>
+<div class="flex mt-2">
+<input class="bg-surface-container-lowest border border-outline-variant/30 px-4 py-2 rounded-l-lg text-body-md focus:outline-none w-full" placeholder="Your email address" type="email"/>
+<button class="bg-primary text-white px-4 py-2 rounded-r-lg font-label-md text-label-md hover:brightness-110 transition-all">Join</button>
+</div>
+</div>
+</div>
+<div class="w-full px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto border-t border-outline-variant/10 text-center md:text-left">
+<p class="text-label-sm font-label-sm text-on-surface-variant opacity-80">© 2024 Aurelia Books. Crafted for the intellectual soul.</p>
+</div>
+</footer>
+</body></html>
