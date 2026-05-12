@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import ContextProvider from "./context/ContextProvider";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home/Home";
+import Home from "./screens/Home/Home";
 import Footer from "./components/Footer/Footer";
 
 function App() {

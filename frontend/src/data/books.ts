@@ -39,4 +39,20 @@ export const books = [
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDPv8as5qjF0Fm7rW454aVc-2JOITS6riFhUtsVUoBV2A-kyWeg3_c-SvG3IwCW3UoO8L0HLp0U-KVUuhXQw0yj-zMn25GVBySl0ZVcwBQ8TsdTCxRkNh3usDGky1s7W-6c0BUe6CakdTjfQ1pktfmTw_qaJq7wOdeOybzZQXubBa3bGL6q-KuHpOZcK0m_WDsnZjyH-pwXAXIf8PLoyfhNGbc-pma7wsJkYd1GdIMWTyvb48kKtNuVERAXly7I4ifatxhWQBgz_xWg",
   },
+  {
+    id: 6,
+    title: "The Silent Patient",
+    author: "Alex Michaelides",
+    price: "$16.00",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBd5H-ABqaM2M8CBVwh6AKnOUHiBXezH1417Ovs7TN-L1M6_BnJNmV0fk6DhKEviJ9V3rE7s_5Ys-Tp2PtytPU4KvFWYqwUY3l43hWDgxsp7tHnfdwEimadkgnwWvqF_VB1bd4lSAHd3UHrGV_trSVpB9MvY5Mf-fQmwjQfcLpqMBo-opZVOTXVeH520AC7Ap72-207gn4sEeJh6pcI3zHG-sfV9SblGnnC7uB7uliho4dx21ZGS7UdzvzDlfKFe6-p0wvr5U-x0LJn",
+  },
+  {
+    id: 7,
+    title: "The Night Circus",
+    author: "Erin Morgenstern",
+    price: "$21.00",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBd5H-ABqaM2M8CBVwh6AKnOUHiBXezH1417Ovs7TN-L1M6_BnJNmV0fk6DhKEviJ9V3rE7s_5Ys-Tp2PtytPU4KvFWYqwUY3l43hWDgxsp7tHnfdwEimadkgnwWvqF_VB1bd4lSAHd3UHrGV_trSVpB9MvY5Mf-fQmwjQfcLpqMBo-opZVOTXVeH520AC7Ap72-207gn4sEeJh6pcI3zHG-sfV9SblGnnC7uB7uliho4dx21ZGS7UdzvzDlfKFe6-p0wvr5U-x0LJn",
+  }
 ];
