@@ -1,6 +1,6 @@
 import { Search, ShoppingBag, SquareUserRound } from "lucide-react";
 
-function Navbar() {
+function Navbar({setIsCartOpen}: {setIsCartOpen: (open: boolean) => void}) {
   return (
     <nav className="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md docked full-width top-0 sticky z-50 shadow-[0_15px_15px_-3px_rgba(74,66,56,0.04)]">
       <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
@@ -43,7 +43,10 @@ function Navbar() {
             />
           </div>
           <div className="flex gap-2">
-            <button className="p-2 text-on-surface-variant hover:text-primary transition-transform duration-150 ease-in-out active:scale-95">
+            <button
+              className="p-2 text-on-surface-variant hover:text-primary transition-transform duration-150 ease-in-out active:scale-95"
+              onClick={() => setIsCartOpen(true)}
+            >
               <ShoppingBag className="cursor-pointer material-symbols-outlined" />
             </button>
             <button className="p-2 text-on-surface-variant hover:text-primary transition-transform duration-150 ease-in-out active:scale-95">
